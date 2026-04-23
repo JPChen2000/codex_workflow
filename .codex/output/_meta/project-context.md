@@ -19,6 +19,7 @@ The scaffold defines:
 - Ambiguous requests should be normalized before architecture or implementation starts.
 - Downstream agents should read `requirement-analysis.md` instead of relying on transient chat phrasing.
 - Large requests should be decomposed into smaller module-scoped tasks.
+- Independent module-scoped stages may be parallelized after shared prerequisites are satisfied and their write sets do not overlap.
 - Sub-agents should stay within narrow responsibilities to reduce implementation drift.
 - Design artifacts should preserve both module-level detail and project-wide consistency.
 

@@ -76,6 +76,13 @@ Only these workflow status values are allowed:
 - `blocked`
 - `needs_revision`
 
+## Dispatch Mode Values
+
+Use these exact values in handoff documents:
+
+- `serial`
+- `parallel`
+
 ## Workflow Columns
 
 Use these canonical workflow stage names when tracking stage completion:
@@ -87,6 +94,25 @@ Use these canonical workflow stage names when tracking stage completion:
 - `change_analysis`
 - `implementation`
 - `review`
+
+## Workflow Coordination Columns
+
+Use these coordination column names when tracking parallel workflow branches:
+
+- `Parent Scope`
+- `Parallel Group`
+- `Depends On`
+- `Owner Agent`
+- `Notes`
+
+## Handoff Field Names
+
+Use these exact field names in structured workflow handoffs:
+
+- `dispatch_mode`
+- `next_agent`
+- `next_agents`
+- `join_condition`
 
 ## Section Behavior
 

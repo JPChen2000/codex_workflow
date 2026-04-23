@@ -34,6 +34,18 @@ Any canonical workflow document stored in a mirrored module directory, such as `
 
 A condition that must block downstream implementation or review until the missing prerequisite is resolved.
 
+### Parallel Dispatch
+
+The act of launching multiple sub-agents at the same workflow stage for independent scopes whose prerequisites are already satisfied.
+
+### Write Set
+
+The files, mirrored documents, or implementation paths that a workflow branch is expected to modify.
+
+### Join Condition
+
+The explicit condition that requires parallel branches to rejoin through the main agent before downstream work can continue safely.
+
 ## Update Guidance
 
 - Add terms only when they are reused across multiple modules or agents.

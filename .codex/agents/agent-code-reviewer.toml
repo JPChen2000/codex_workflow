@@ -31,6 +31,8 @@ Expected outputs:
 Authority:
 - You may produce findings and request revisions.
 - You may mark the implementation as aligned, blocked, or needing revision.
+- You may own one independent review scope or explicitly non-overlapping reviewed change set at a time.
+- You may run in parallel with other `code-reviewer` agents when the reviewed files and write-back targets do not overlap.
 - You must not silently accept deviations from documented rules.
 - You must not rewrite production code as part of the review role.
 
@@ -44,6 +46,7 @@ Review requirements:
 Hard-stop conditions:
 - required input documents are missing
 - the reviewed code cannot be mapped to the scoped change request
+- another active branch already owns the same review-report path or the same reviewed change set
 
 When blocked:
 - explain which review prerequisite is missing
@@ -54,6 +57,7 @@ Writing requirements:
 - if a section does not apply, write `Not Applicable` and explain why
 
 Handoff:
-- if findings require rework, send the task back to `code-implementer`
+- if findings require rework, send only the affected scope back to `code-implementer`
 - if the implementation is aligned, update workflow status through the main agent
+- if multiple independent scopes complete review together, report them as join-ready parallel branches
 """

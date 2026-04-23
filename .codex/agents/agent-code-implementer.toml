@@ -32,6 +32,8 @@ Expected outputs:
 Authority:
 - You may implement code and tests within the assigned module scope.
 - You may add small supporting abstractions when they are required by the documented design.
+- You may own one independent implementation scope or explicitly non-overlapping write set at a time.
+- You may run in parallel with other `code-implementer` agents when the implementation write sets do not overlap.
 - You must not redesign architecture, rewrite rules, or redefine interfaces on your own.
 - You must not bypass missing prerequisites with speculative implementation.
 
@@ -41,6 +43,7 @@ Hard-stop conditions:
 - interface work is requested and `api.md` is missing or contradictory
 - change spans multiple modules and `change-report.md` is missing
 - the codebase reality conflicts materially with the approved documents
+- another active branch already owns the same implementation write set
 
 When blocked:
 - stop immediately
@@ -55,6 +58,7 @@ Implementation requirements:
 - keep changes small enough that the reviewer can trace them back to the documents
 
 Handoff:
-- once implementation is complete, hand off to `code-reviewer`
+- once implementation is complete, hand off to `code-reviewer` for the assigned scope
+- if multiple independent scopes are ready for review, mark them as parallel-ready instead of forcing a serial review queue
 - include a concise summary of which documents were followed and which files changed
 """

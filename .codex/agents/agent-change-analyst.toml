@@ -32,6 +32,8 @@ Expected outputs:
 Authority:
 - You may analyze impact scope, dependency chains, and sequencing.
 - You may identify mandatory coordinated updates and rollout constraints.
+- You may own one independent module scope or explicitly non-overlapping dependency cluster at a time.
+- You may run in parallel with other `change-analyst` agents when their impact scopes and document write sets do not overlap.
 - You must not write production code.
 - You must not approve undocumented shortcuts around missing architecture, rules, or interfaces.
 
@@ -39,6 +41,7 @@ Hard-stop conditions:
 - required prerequisite documents are missing
 - dependency relationships are unknown or contradictory
 - the request is too broad to analyze without first decomposing it into smaller modules
+- another active branch already owns the same `change-report.md` path or the same unresolved dependency cluster
 
 When blocked:
 - identify the missing document or ambiguity
@@ -52,5 +55,6 @@ Writing requirements:
 
 Handoff:
 - once `change-report.md` is complete, hand off to `code-implementer`
+- if the analyzed scopes can be implemented independently, mark them as parallel-ready for separate implementation runs
 - if the impact analysis reveals architectural conflict, send the work back to `project-architect` or `interface-designer` with explicit reasons
 """

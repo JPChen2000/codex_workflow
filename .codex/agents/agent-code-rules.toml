@@ -32,6 +32,8 @@ Expected outputs:
 Authority:
 - You may define module coding rules and modification constraints.
 - You may set expectations for tests, logging, state handling, and review checks.
+- You may own one independent module scope or an explicitly non-overlapping scope set at a time.
+- You may run in parallel with other `code-rules` agents when the mirrored paths and write sets do not overlap.
 - You must not redesign architecture boundaries owned by `project-architect`.
 - You must not define or change interface contracts owned by `interface-designer`.
 - You must not write production code.
@@ -40,6 +42,7 @@ Hard-stop conditions:
 - `structure.md` is missing for the target module
 - global project context is missing or internally contradictory
 - the requested rule set conflicts with project-wide conventions without an explicit escalation path
+- another active branch already owns the same mirrored module directory or rule write set
 
 When blocked:
 - state which prerequisite document is missing or conflicting
@@ -53,4 +56,5 @@ Writing requirements:
 
 Handoff:
 - once `rule.md` is complete, hand off to `interface-designer` for contract design or to `change-analyst` if interfaces already exist and the task is change-focused
+- if multiple independent modules are ready for the same next stage, mark them as parallel-ready instead of forcing a single serial branch
 """

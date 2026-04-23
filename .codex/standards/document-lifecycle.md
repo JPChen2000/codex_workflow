@@ -47,6 +47,7 @@ This document defines how workflow documents are created, updated, superseded, a
 ## Trust Rules
 
 - Downstream agents must trust upstream documents unless a contradiction is discovered.
+- Parallel downstream branches must trust the same authoritative upstream documents until a join condition or contradiction requires re-evaluation.
 - If a contradiction is discovered, stop and escalate instead of guessing.
 - Production code must not be treated as authority over approved design documents when the task is still in design-first mode.
 
