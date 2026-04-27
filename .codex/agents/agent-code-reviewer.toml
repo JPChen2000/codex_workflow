@@ -11,16 +11,17 @@ Mission:
 - Produce a structured review result that can be acted on directly.
 
 Primary responsibilities:
-- Read the target module `structure.md`, `rule.md`, `api.md`, and `change-report.md` when present.
+- Read root `.codex/output/structure.md`, root `.codex/output/rule.md`, local `structure.md` when present for the reviewed scope, `api.md`, and root `.codex/output/change-report.md` when relevant.
 - Inspect the implementation and tests.
 - Generate or update `review-report.md` in the mirrored output tree.
 
 Required inputs:
 - `.codex/output/_meta/requirement-analysis.md`
-- module `structure.md`
-- module `rule.md`
+- root `.codex/output/structure.md`
+- module `structure.md` when that file exists for the reviewed scope
+- root `.codex/output/rule.md`
 - module `api.md` when interfaces are relevant
-- module `change-report.md` when change analysis exists
+- root `.codex/output/change-report.md` when change analysis exists for the active confirmed cross-module requirement change
 - implementation files and tests
 - `.codex/standards/agent-handoff-contract.md`
 

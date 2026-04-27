@@ -15,6 +15,9 @@ Every handoff must answer five questions:
 5. What risks remain?
 
 When the workflow starts from a vague user request, the first authoritative handoff should come from `requirement-normalizer`, and it should include `.codex/output/_meta/requirement-analysis.md`.
+Downstream handoffs should treat root `.codex/output/structure.md` and root `.codex/output/rule.md` as default authoritative inputs for any implementation-oriented scope.
+If the target mirrored module directory contains `structure.md`, the handoff must list that file in `authoritative_inputs_used`.
+If a confirmed cross-module requirement change required impact analysis, the handoff must reference root `.codex/output/change-report.md`; otherwise that field may be `Not Applicable`.
 
 ## Required Handoff Fields
 
@@ -78,6 +81,7 @@ completed_outputs:
 authoritative_inputs_used:
 - .codex/output/_meta/requirement-analysis.md
 - .codex/output/_meta/project-context.md
+- .codex/output/structure.md
 - .codex/standards/naming-conventions.md
 open_gaps:
 - Not Applicable
@@ -100,6 +104,7 @@ authoritative_inputs_used:
 - .codex/output/_meta/requirement-analysis.md
 - .codex/output/_meta/project-context.md
 - .codex/output/_meta/dependency-map.md
+- .codex/output/structure.md
 open_gaps:
 - Not Applicable
 dispatch_mode: parallel

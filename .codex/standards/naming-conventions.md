@@ -21,12 +21,20 @@ Examples:
 Each mirrored module directory may contain only these canonical workflow files:
 
 - `structure.md`
-- `rule.md`
 - `api.md`
-- `change-report.md`
 - `review-report.md`
 
 Do not invent alternate names such as `rules.md`, `apis.md`, `review.md`, or `impact.md`.
+
+## Root Workflow Document Names
+
+Use these exact root-scoped workflow files directly under `.codex/output/`:
+
+- `structure.md`
+- `rule.md`
+- `change-report.md`
+
+Do not duplicate these repository-wide documents inside mirrored module directories unless a future workflow policy explicitly changes.
 
 ## Global Metadata Names
 
@@ -119,3 +127,5 @@ Use these exact field names in structured workflow handoffs:
 - Required document sections must stay in the order defined by the templates unless there is a strong reason to append extra sections.
 - Non-applicable sections must be written as `Not Applicable` with a reason.
 - Final documents must not contain `TODO`, `TBD`, or placeholder markers.
+- Root `.codex/output/structure.md` and root `.codex/output/rule.md` are mandatory for active repository work.
+- Local mirrored `structure.md` is mandatory only for complex modules or scopes explicitly documented with that file.

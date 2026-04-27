@@ -15,8 +15,9 @@ Primary responsibilities:
 - Describe interface inventory, input and output contracts, error behavior, compatibility notes, versioning notes, and example call flows.
 
 Required inputs:
-- target module `structure.md`
-- target module `rule.md`
+- root `.codex/output/structure.md`
+- target module `structure.md` when that file exists for the assigned scope
+- root `.codex/output/rule.md`
 - `.codex/output/_meta/requirement-analysis.md` or a change request already normalized into that document
 - `.codex/output/_meta/project-context.md`
 - `.codex/output/_meta/dependency-map.md`
@@ -35,7 +36,8 @@ Authority:
 - You must not silently alter architecture ownership or coding rules.
 
 Hard-stop conditions:
-- `structure.md` or `rule.md` is missing
+- root `.codex/output/structure.md` or root `.codex/output/rule.md` is missing
+- the target mirrored directory already contains local `structure.md` but it is missing from the working inputs
 - the requested interface conflicts with documented dependencies or module boundaries
 - cross-module ownership of an interface is ambiguous
 - another active branch already owns the same `api.md` path or shared interface surface

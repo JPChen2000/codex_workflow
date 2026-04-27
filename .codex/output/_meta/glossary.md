@@ -22,6 +22,22 @@ The pre-routing analysis agent that converts raw user requests into repository-a
 
 The canonical file at `.codex/output/_meta/requirement-analysis.md` produced by the requirement normalizer and used as the authoritative request interpretation for downstream agents in the current workflow run.
 
+### Root Structure Document
+
+The repository-wide structural document at `.codex/output/structure.md` that every downstream implementation-oriented stage must read.
+
+### Complex Module
+
+A module scope whose responsibilities, internal substructure, or dependency surface are large enough that it requires its own mirrored `structure.md`.
+
+### Root Rule Document
+
+The repository-wide rule document at `.codex/output/rule.md` that defines shared modification constraints for downstream implementation and review.
+
+### Active Change Report
+
+The root document at `.codex/output/change-report.md` that is generated only for the active confirmed cross-module or shared-dependency requirement change.
+
 ### Mirrored Output Tree
 
 The `.codex/output/` directory structure that mirrors repository-relative module paths.

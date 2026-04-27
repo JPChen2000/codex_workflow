@@ -8,6 +8,13 @@ This file records project-wide dependency and ownership relationships that shoul
 
 The repository is in scaffold mode, so no concrete source-module dependency graph exists yet.
 
+## Workflow Document Dependencies
+
+- All implementation-oriented scopes depend on root `.codex/output/structure.md`.
+- All implementation-oriented scopes depend on root `.codex/output/rule.md`.
+- A scope depends on a local mirrored `structure.md` only when that file exists for the scope or when the scope is classified as complex.
+- Cross-module or shared-dependency implementation depends on root `.codex/output/change-report.md` only after a confirmed requirement change triggers change analysis.
+
 ## Seed Rules
 
 - Use this file to record high-level module dependency directions once real source modules are added.

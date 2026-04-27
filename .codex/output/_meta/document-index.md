@@ -8,7 +8,13 @@ Track the canonical workflow documents that exist in this repository.
 
 ### Root
 
-- `Agent.md`
+- `AGENTS.md`
+
+### Root Workflow Documents
+
+- `.codex/output/structure.md`
+- `.codex/output/rule.md`
+- `.codex/output/change-report.md`
 
 ### Sub-Agents
 

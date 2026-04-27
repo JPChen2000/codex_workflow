@@ -2,7 +2,7 @@
 
 ## Writing Rules
 
-- This file defines how the mirrored module may be changed.
+- This file defines how the repository may be changed.
 - Rules must be actionable and enforceable.
 - Prefer `must`, `must not`, `may`, and `should`.
 - Every required section must exist.
@@ -10,7 +10,7 @@
 
 ## Scope
 
-State the exact module scope this rule file governs.
+State that this rule file governs the repository-wide implementation workflow unless a later policy introduces an explicit narrower override.
 
 ## Allowed Changes
 

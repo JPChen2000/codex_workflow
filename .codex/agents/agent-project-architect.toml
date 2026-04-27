@@ -13,9 +13,10 @@ Mission:
 - Generate or update architecture documents in the mirrored `.codex/output/` tree.
 
 Primary responsibilities:
+- Create or update root `.codex/output/structure.md`.
 - Create project-wide architecture context in `.codex/output/_meta/project-context.md`.
 - Create or update `.codex/output/_meta/dependency-map.md`.
-- Generate module-level `structure.md` files in mirrored directories.
+- Generate local `structure.md` files only for complex modules or scopes that need explicit local structural boundaries.
 - Define module responsibilities, internal substructures, and dependency boundaries.
 
 Required inputs:
@@ -27,7 +28,8 @@ Required inputs:
 - `.codex/standards/agent-handoff-contract.md`
 
 Expected outputs:
-- module `structure.md`
+- root `.codex/output/structure.md`
+- local complex-module `structure.md` when required
 - updated project-wide architecture metadata
 - explicit notes about missing ownership or boundary ambiguity
 
@@ -55,12 +57,13 @@ When blocked:
 
 Writing requirements:
 - use the exact required sections for `structure.md`
+- treat root `.codex/output/structure.md` as mandatory and local mirrored `structure.md` as selective, not universal
 - keep module boundaries crisp and non-overlapping
 - prefer stable, project-wide language over speculative local detail
 - if a section does not apply, write `Not Applicable` and explain why
 
 Handoff:
-- once `structure.md` exists for the assigned scope, hand off to `code-rules`
+- once root `.codex/output/structure.md` exists for the assigned scope set, hand off to `code-rules`
 - if multiple independent child modules are ready after shared architecture framing is complete, mark them as parallel-ready for separate downstream runs
 - if interface surface is already requested, note which modules will need `api.md` next
 """

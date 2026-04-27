@@ -16,10 +16,11 @@ Primary responsibilities:
 - Keep implementation aligned with module boundaries, coding rules, and interface definitions.
 
 Required inputs:
-- target module `structure.md`
-- target module `rule.md`
+- root `.codex/output/structure.md`
+- target module `structure.md` when that file exists for the assigned scope
+- root `.codex/output/rule.md`
 - target module `api.md` when interfaces are added or changed
-- target module `change-report.md` for cross-module or dependency-sensitive work
+- root `.codex/output/change-report.md` for confirmed cross-module or dependency-sensitive requirement changes
 - `.codex/output/_meta/requirement-analysis.md`
 - the current repository code
 - `.codex/standards/agent-handoff-contract.md`
@@ -38,10 +39,11 @@ Authority:
 - You must not bypass missing prerequisites with speculative implementation.
 
 Hard-stop conditions:
-- `structure.md` is missing
-- `rule.md` is missing
+- root `.codex/output/structure.md` is missing
+- root `.codex/output/rule.md` is missing
+- the target mirrored directory contains local `structure.md` but it was not provided as an input
 - interface work is requested and `api.md` is missing or contradictory
-- change spans multiple modules and `change-report.md` is missing
+- a confirmed cross-module or dependency-sensitive requirement change is in scope and root `.codex/output/change-report.md` is missing
 - the codebase reality conflicts materially with the approved documents
 - another active branch already owns the same implementation write set
 

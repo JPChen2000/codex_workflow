@@ -2,11 +2,13 @@
 
 ## Writing Rules
 
-- This file is the canonical structural description for one mirrored module scope.
+- This file is the canonical structural description for either the repository root scope or one complex mirrored module scope.
 - Keep it architecture-focused.
 - Do not include detailed production code.
 - Every required section must exist.
 - If a section does not apply, write `Not Applicable` and explain why.
+- Root `.codex/output/structure.md` is mandatory for active work.
+- Local mirrored `structure.md` is optional by default and should be created only when the module is complex or needs explicit local boundary documentation.
 
 ## Module Overview
 

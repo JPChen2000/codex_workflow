@@ -17,7 +17,7 @@ State whether the implementation matches the requested outcome and note any gaps
 
 ## Rule Compliance
 
-Check whether the implementation follows the module `rule.md`.
+Check whether the implementation follows root `.codex/output/rule.md` and any applicable scoped constraints derived from the approved structure documents.
 
 ## API Contract Compliance
 

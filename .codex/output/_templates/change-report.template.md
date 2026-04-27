@@ -2,10 +2,11 @@
 
 ## Writing Rules
 
-- This file records the impact of a requested change before implementation.
+- This file records the impact of the active confirmed cross-module or shared-dependency requirement change before implementation.
 - Separate mandatory coordinated changes from optional follow-ups.
 - Every required section must exist.
 - If a section does not apply, write `Not Applicable` and explain why.
+- This root document is overwritten for the active change run rather than versioned per module by default.
 
 ## Change Request Summary
 
